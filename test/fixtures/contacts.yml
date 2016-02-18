@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  key: MyString
-  name: MyString
-  email: MyString
-  message: MyString
+  key: my_random_key
+  name: null
+  email: null
+  message: null
 
 two:
-  key: MyString
-  name: MyString
-  email: MyString
-  message: MyString
+  key: another_random_key
+  name: Andrey Luiz
+  email: andrey.heur@gmail.com
+  message: Hello there.
