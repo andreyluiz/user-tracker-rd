@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  contact_id: 1
+  page: MyString
+  when: 2016-02-18 12:22:19
+
+two:
+  contact_id: 1
+  page: MyString
+  when: 2016-02-18 12:22:19
