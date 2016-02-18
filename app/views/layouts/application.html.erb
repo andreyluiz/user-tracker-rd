@@ -8,7 +8,14 @@
 </head>
 <body>
 
-<%= yield %>
+  <ul>
+    <li><%= link_to 'Home', root_path %> | </li>
+    <li><%= link_to 'Prices', prices_path %> | </li>
+    <li><%= link_to 'About us', aboutus_path %> | </li>
+    <li><%= link_to 'Contact us', contactus_path %></li>
+  </ul>
+
+  <%= yield %>
 
 </body>
 </html>
