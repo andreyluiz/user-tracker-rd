@@ -34,6 +34,17 @@ var Contacts = (function ($) {
       .error(error);
   };
 
+  // Helper method for put transactions
+  var put = function (url, data, done, error) {
+    $.ajax({
+      method: 'PUT',
+      url: url,
+      data: data
+    })
+      .done(done)
+      .error(error);
+  };
+
   // When page is loaded
   Contacts.prototype.newContact = function (callback) {
     // Gets the contact_key from cookies or create a new one
@@ -58,6 +69,15 @@ var Contacts = (function ($) {
     post('/api/contacts/key/' + this.key + '/addvisit', { page: page }, function (visit) {
       console.log('Added a new visit.');
       callback(visit);
+    }, function (error) {
+      callback(null, error);
+    });
+  };
+
+  // When updating a contact
+  Contacts.prototype.updateContact = function (data, callback) {
+    put('/api/contacts/key/' + this.key, data, function (contact) {
+      callback(contact);
     }, function (error) {
       callback(null, error);
     });

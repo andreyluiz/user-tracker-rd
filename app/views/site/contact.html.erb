@@ -1,2 +1,10 @@
-<h1>Site#contact</h1>
-<p>Find me in app/views/site/contact.html.erb</p>
+<h1>Contact</h1>
+<form action="#" onsubmit="submitForm(event, this)">
+  <label for="name">Name</label><br>
+  <input type="text" id="name" name="name" placeholder="Name"><br>
+  <label for="email">Email</label><br>
+  <input type="email" id="email" name="email" placeholder="Email"><br>
+  <label for="message">Message</label><br>
+  <textarea id="message" name="message" placeholder="Message" cols="30" rows="5"></textarea><br>
+  <button type="submit">Send</button>
+</form>

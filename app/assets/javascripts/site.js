@@ -18,3 +18,12 @@ var pageVisited = function (page) {
     // Callback returns the visited page as the first param and the error as a second param.
   });
 };
+
+var submitForm = function (event, form) {
+  event.preventDefault();
+  var formObject = $(form).serializeObject();
+  contacts.updateContact(formObject, function () {
+    console.log('Updated.');
+    window.location.replace("/contact");
+  });
+};
