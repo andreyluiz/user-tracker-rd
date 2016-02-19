@@ -5,4 +5,16 @@ var contacts = new Contacts();
 contacts.newContact(function () {
   // Callback returns the retrieved or created contact as the first param and 
   // the error (if it was not 404) as a second param.
+  // Because site aways is started in Home page, register a Home visit
+  contacts.pageVisited(contacts.pages.home, function () {
+    // Callback returns the visited page as the first param and the error as a second param.
+  });
 });
+
+// Function called for the onClick event of the link_to tags
+var pageVisited = function (page) {
+  console.log('Visited the "' + page + '" page.');
+  contacts.pageVisited(page, function () {
+    // Callback returns the visited page as the first param and the error as a second param.
+  });
+};

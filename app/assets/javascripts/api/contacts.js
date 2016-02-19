@@ -54,7 +54,13 @@ var Contacts = (function ($) {
 
   // When visiting a page (every time)
   Contacts.prototype.pageVisited = function (page, callback) {
-    
+    // Here the contact will aways exist
+    post('/api/contacts/key/' + this.key + '/addvisit', { page: page }, function (visit) {
+      console.log('Added a new visit.');
+      callback(visit);
+    }, function (error) {
+      callback(null, error);
+    });
   };
 
   // When visiting the contacts listing
