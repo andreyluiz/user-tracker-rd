@@ -83,15 +83,5 @@ var Contacts = (function ($) {
     });
   };
 
-  // When visiting the contacts listing
-  Contacts.prototype.getAllContacts = function (callback) {
-
-  };
-
-  // When showing a specific contact
-  Contacts.prototype.showContact = function (callback) {
-
-  };
-
   return Contacts;
 })(jQuery);

@@ -16,6 +16,7 @@
 //= require turbolinks
 //= require_tree .
 
+// Extension for jQuery. Transforms form data into a object.
 $.fn.serializeObject = function() {
   var o = {};
   var a = this.serializeArray();

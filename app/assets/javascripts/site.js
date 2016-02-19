@@ -19,9 +19,12 @@ var pageVisited = function (page) {
   });
 };
 
+// Function called in the onSubmit of the form
 var submitForm = function (event, form) {
   event.preventDefault();
+  // Serializes the form data into a object
   var formObject = $(form).serializeObject();
+  // Updates the contact
   contacts.updateContact(formObject, function () {
     console.log('Updated.');
     window.location.replace("/contact");
