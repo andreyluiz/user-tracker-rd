@@ -7,6 +7,9 @@ module Api
     end
 
     def showbykey
+      if !@contact
+        render json: { message: 'Not found.' }, status: :not_found
+      end
     end
 
     def show
