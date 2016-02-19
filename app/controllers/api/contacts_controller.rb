@@ -1,4 +1,4 @@
-class ContactsController < ApplicationController
+class Api::ContactsController < ApplicationController
   before_action :set_contact_by_key, only: [:showbykey, :update, :addvisit]
 
   def index

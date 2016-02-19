@@ -8,6 +8,6 @@ class SiteController < ApplicationController
   def aboutus
   end
 
-  def contactus
+  def contact
   end
 end
