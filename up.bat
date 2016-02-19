@@ -1,0 +1,3 @@
+bundle install
+
+rails s
