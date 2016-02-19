@@ -12,7 +12,9 @@
     <li><%= link_to 'Home', root_path, :id => 'home', :onclick => 'pageVisited(this.id)' %> | </li>
     <li><%= link_to 'Prices', prices_path, :id => 'prices', :onclick => 'pageVisited(this.id)' %> | </li>
     <li><%= link_to 'About us', aboutus_path, :id => 'aboutus', :onclick => 'pageVisited(this.id)' %> | </li>
-    <li><%= link_to 'Contact', contact_path, :id => 'contact', :onclick => 'pageVisited(this.id)' %></li>
+    <li><%= link_to 'Contact', contact_path, :id => 'contact', :onclick => 'pageVisited(this.id)' %> | </li>
+    <!-- TODO (URGENT) This link should be hidden for default users -->
+    <li><%= link_to 'List contacts', admin_contacts_path %></li>
   </ul>
 
   <%= yield %>

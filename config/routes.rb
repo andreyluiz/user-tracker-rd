@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    get '/contacts', :to => 'contacts#index'
+    get '/contacts/:key', :to => 'contacts#show', :as => :contact
+  end
+
   root :to => 'site#home'
   get '/prices' => 'site#prices'
   get '/aboutus' => 'site#aboutus'
