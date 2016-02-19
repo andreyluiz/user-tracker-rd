@@ -11,8 +11,8 @@ class SiteControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get us" do
-    get :us
+  test "should get aboutus" do
+    get :aboutus
     assert_response :success
   end
 
